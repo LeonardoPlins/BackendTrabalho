@@ -4,8 +4,8 @@ import conectar from "./conexao.js";
 export default class CategoriaDAO{
     async gravar(categoria){
         if(categoria instanceof Categoria){
-            const sql = "INSERT INTO categoria(cat_descricao,cat_codigo,cat_cor,cat_tipo,cat_origem) VALUES(?,?,?,?,?)"; 
-            const parametros = [categoria.descricao, categoria.código,categoria.cor,categoria.tipo,categoria.origem];
+            const sql = "INSERT INTO categoria(cat_nome,cat_descricao,cat_codigo,cat_cor,cat_tipo,cat_origem) VALUES(?,?,?,?,?,?)"; 
+            const parametros = [categoria.nome, categoria.descricao, categoria.código,categoria.cor,categoria.tipo,categoria.origem];
             const conexao = await conectar(); //retorna uma conexão
             const retorno = await conexao.execute(sql,parametros); //prepara a sql e depois executa
             categoria.nome = retorno;

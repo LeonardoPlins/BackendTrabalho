@@ -77,18 +77,22 @@ export default class Categoria{
     }
 
     async gravar(){
-
+        const catDAO = new CategoriaDAO();
+        await catDAO.gravar(this);
     }
 
     async excluir(){
-        
+        const catDAO = new CategoriaDAO();
+        await catDAO.excluir(this);
     }
 
     async atualizar(){
-        
+        const catDAO = new CategoriaDAO();
+        await catDAO.atualizar(this);
     }
 
     async consultar(parametro){
-        
+        const catDAO = new CategoriaDAO();
+        return await catDAO.consultar(parametro);
     }
 }
