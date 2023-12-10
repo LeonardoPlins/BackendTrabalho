@@ -1,5 +1,5 @@
 import { Router } from "express";
-import FornecedorCtrl from "../controle/fornecedorCtrl";
+import FornecedorCtrl from "../controle/fornecedorCtrl.js";
 
 //rotas é o mapeamento das requisições da web para um determinado
 //endpoint da aplicação
